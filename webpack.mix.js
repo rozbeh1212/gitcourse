@@ -1,3 +1,6 @@
+/**
+ * Created by edwin on 3/26/17.
+ */
 const { mix } = require('laravel-mix');
 
 mix.js('resources/assets/js/app.js', 'public/js')

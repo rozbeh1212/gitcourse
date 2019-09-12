@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
+use function compact;
 use function view;
 
-class AdminUsersController extends Controller
+class
+
+AdminUsersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +18,10 @@ class AdminUsersController extends Controller
      */
     public function index()
     {
-    	return view('admin.users.index');
+
+	    $users = User::all();
+
+	    return view( 'admin.users.index', compact( 'users' ) );
     }
 
     /**
